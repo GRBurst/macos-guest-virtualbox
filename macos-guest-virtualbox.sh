@@ -685,6 +685,8 @@ VBoxManage modifyvm "${vm_name}" --cpus "${cpu_count}" --memory "${memory_size}"
  --boot4 none --firmware efi --rtcuseutc on --usbxhci on --chipset ich9 \
  --mouse usbtablet --keyboard usb --audiocontroller hda --audiocodec stac9221
 
+VBoxManage modifyvm "${vm_name}" --cpu-profile \
+ "Intel Xeon X5482 3.20GHz"
 VBoxManage setextradata "${vm_name}" \
  "VBoxInternal2/EfiGraphicsResolution" "${resolution}"
 VBoxManage setextradata "${vm_name}" \
